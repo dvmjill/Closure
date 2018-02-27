@@ -22,3 +22,62 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+root 'vets#show'
+
+  get     'rdvms/new' =>          'rdvms#new', as: 'new_rdvm'
+
+  get     'rdvms' =>              'rdvms#index', as: 'rdvms'
+
+  post    'rdvms' =>              'rdvms#create'
+
+  get     'rdvms/:id' =>          'rdvms#show', as: 'rdvm'
+
+  delete  'rdvms/:id' =>          'rdvms#destroy'
+
+  patch   'rdvms/:id' =>          'rdvms#update'
+
+  get     'rdvms/:id/edit' =>     'rdvms#edit', as: 'edit_rdvm'
+
+
+  get     'vets/new' =>          'vets#new', as: 'new_vet'
+
+  get     'vets' =>              'vets#index', as: 'vets'
+
+  post    'vets' =>              'vets#create'
+
+  get     'vets/:id' =>          'vets#show', as: 'vet'
+
+  delete  'vets/:id' =>          'vets#destroy'
+
+  patch   'vets/:id' =>          'vets#update'
+
+  get     'vets/:id/edit' =>     'vets#edit', as: 'edit_vet'
+
+
+  get     'clients/new' =>          'clients#new', as: 'new_client'
+
+  get     'clients' =>              'clients#index', as: 'clients'
+
+  post    'clients' =>              'clients#create'
+
+  get     'clients/:id' =>          'clients#show', as: 'client'
+
+  delete  'clients/:id' =>          'clients#destroy'
+
+  patch   'clients/:id' =>          'clients#update'
+
+  get     'clients/:id/edit' =>     'clients#edit', as: 'edit_client'
+
+
+  get     'pets/new' =>          'pets#new', as: 'new_pet'
+
+  get     'pets' =>              'pets#index', as: 'pets'
+
+  post    'pets' =>              'pets#create'
+
+  get     'pets/:id' =>          'pets#show', as: 'pet'
+
+  patch   'pets/:id' =>          'pets#update'
+
+  get     'pets/:id/edit' =>     'pets#edit', as: 'edit_pet'

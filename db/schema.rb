@@ -39,4 +39,18 @@ ActiveRecord::Schema.define(version: 20180227163452) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "vets", force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+    t.string "address"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "email"
+    t.string "phone"
+    t.string "crematory_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
