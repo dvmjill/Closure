@@ -28,25 +28,31 @@
 
   <div class="field">
     <%= form.label :species %>
+    <%= form.select :species, species: :pet_species %>
     <%= form.text_field :species, id: :pet_species %>
   </div>
 
   <div class="field">
     <%= form.label :breed %>
+    <%= form.select :breed_id, breeds: :pet_breed %>
     <%= form.text_field :breed, id: :pet_breed %>
   </div>
 
   <div class="field">
-    <%= form.label :client_id %>
-    <%= form.number_field :client_id, id: :pet_client_id %>
+    <%= form.label :client %>
+    <%= form.select :client_id, clients: :pet_client_id %>
+    <%= form.text_field :client, id: :pet_client %>
   </div>
 
   <div class="field">
-    <%= form.label :vet_id %>
-    <%= form.number_field :vet_id, id: :pet_vet_id %>
+    <%= form.label :rdvm_id %>
+    <%= form.select :rdvm_id, rdvms: :pet_rdvm_id %>
+    <%= form.text_field :rdvm, id: :pet_rdvm %>
+
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+<h3>Closure/app/views/pets/_form.html.erb</h3>
 <% end %>
