@@ -1,0 +1,62 @@
+<%= form_with(model: vet, local: true) do |form| %>
+  <% if vet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vet.errors.count, "error") %> prohibited this vet from being saved:</h2>
+
+      <ul>
+      <% vet.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :username %>
+    <%= form.text_field :username, id: :vet_username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_digest %>
+    <%= form.text_field :password_digest, id: :vet_password_digest %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :vet_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city, id: :vet_city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state, id: :vet_state %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip, id: :vet_zip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :vet_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, id: :vet_phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crematory_name %>
+    <%= form.text_field :crematory_name, id: :vet_crematory_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

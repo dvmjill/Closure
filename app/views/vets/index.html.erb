@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Password digest</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Crematory name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vets.each do |vet| %>
+      <tr>
+        <td><%= vet.username %></td>
+        <td><%= vet.password_digest %></td>
+        <td><%= vet.address %></td>
+        <td><%= vet.city %></td>
+        <td><%= vet.state %></td>
+        <td><%= vet.zip %></td>
+        <td><%= vet.email %></td>
+        <td><%= vet.phone %></td>
+        <td><%= vet.crematory_name %></td>
+        <td><%= link_to 'Show', vet %></td>
+        <td><%= link_to 'Edit', edit_vet_path(vet) %></td>
+        <td><%= link_to 'Destroy', vet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vet', new_vet_path %>
