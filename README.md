@@ -22,6 +22,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+To Do List:
+1.) Do we need bridge tables for linking pet form data entry to the data assoc. with client and rdvm modules?
 
 root 'vets#show'
 
