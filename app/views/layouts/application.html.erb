@@ -6,8 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
+    <h1>Application.html.erb Template in Layouts</h1>
+    <ul>
+      <li> link_to "RDVM Contacts", rdvms_path </li>
+      <li><%= link_to "Client List", clients_path %> </li>
+      <li><%= link_to "Pets in Database", pets_path %> </li>
+      <li> link_to "Add New RDVM", new_rdvm_path </li>
+      <li><%= link_to "New Client", new_client_path %> </li>
+      <li><%= link_to "Add a Pet", new_pet_path %> </li>
+      </ul>
+    <%= render 'partials/errors' %>
+
+  </head>
+<h3>Closure/app/views/layouts/application.html.erb</h3>
   <body>
     <h1 ><a href="http://closureathome.com/"  target="_blank" id="logo">closureathome.com</a></h1>
     <br>
