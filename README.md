@@ -83,3 +83,8 @@ root 'vets#show'
   patch   'pets/:id' =>          'pets#update'
 
   get     'pets/:id/edit' =>     'pets#edit', as: 'edit_pet'
+
+  <div class="field">
+    <%= form.label :vet_id %>
+    <%= form.number_field :vet_id, id: :client_vet_id %>
+  </div>
