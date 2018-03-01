@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :vets
   resources :pets
 
-  get     'rdvms/new' =>          'rdvms#new', as: 'new_rdvm'
+    root 'vets#index'
+
+    get     'rdvms/new' =>          'rdvms#new', as: 'new_rdvm'
 
    get     'rdvms' =>              'rdvms#index', as: 'rdvms'
 

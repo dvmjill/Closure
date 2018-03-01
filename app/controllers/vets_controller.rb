@@ -1,5 +1,6 @@
 class VetsController < ApplicationController
   before_action :set_vet, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_logged_in, only: [:create]
 
   # GET /vets
   # GET /vets.json
@@ -28,8 +29,10 @@ class VetsController < ApplicationController
 
     respond_to do |format|
       if @vet.save
+        session[:vet_id] = @vet.id
         format.html { redirect_to @vet, notice: 'Vet was successfully created.' }
         format.json { render :show, status: :created, location: @vet }
+
       else
         format.html { render :new }
         format.json { render json: @vet.errors, status: :unprocessable_entity }
