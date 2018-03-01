@@ -42,5 +42,6 @@
 
 <br>
 
-<%= link_to 'New Client', new_client_path %>
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<li><%= link_to "Update Client Info", edit_client_path(id: :id_client) %></li>
 <h3>Closure/app/views/clients/index.html.erb</h3>
